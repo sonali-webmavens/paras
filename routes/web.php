@@ -17,6 +17,25 @@ use App\Http\Controllers\CompanyController;
 Route::get('/', function () {
     return view('welcome');
 });
+<<<<<<< Updated upstream
+=======
+Route::group([
+              'prefix'=> '{locale?}', 
+              'where'=> ['locale'=> '[a-zA-z]{2}'],
+              'middleware'=> ['setlocale'] ],
+            function(){
+
+    Route::get('/', function () {
+        return view(view:'welcome');
+    });
+    Route::view('/admin','admin.dashboard');
+    
+    Auth::routes();
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+});
+Route::resource('/CompanyResource',CompanyController::class)->middleware('auth');
+Route::resource('/EmpResource', EmployeController::class)->middleware('auth');
+>>>>>>> Stashed changes
 
 Route::resource('EmpResource', EmpController::class)->middleware('auth');
 Route::resource('CompanyResource',CompanyController::class)->middleware('auth');

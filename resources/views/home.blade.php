@@ -18,6 +18,25 @@
                 </div>
             </div>
         </div>
+<<<<<<< Updated upstream
+=======
+
+        <html>
+            <head>
+                <title>
+                    English
+                </title>
+            </head>
+            <body>
+                <h1>{{__('page')}}</h1>
+                <ul>
+                    <li></li>
+                </ul>
+
+                
+            </body>
+        </html>
+>>>>>>> Stashed changes
     </div>
 </div>
 @endsection

@@ -6,24 +6,51 @@ use Illuminate\Http\File;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
+<<<<<<< Updated upstream
 use App\Http\Requests\CompanyformRequest;
 
 class CompanyController extends Controller
 {
+=======
+use Notification;
+use App\Notifications\SendEmailNotification;
+// use Illuminate\Support\Facades\Notification;
+
+ 
+class CompanyController extends Controller
+{
+    
+>>>>>>> Stashed changes
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
+<<<<<<< Updated upstream
     {
         $com=Company::paginate(5);
         return view('company.index')->with('com',$com);
     }
+=======
+    { 
+        return view('company.index');
+    }
+    
+>>>>>>> Stashed changes
     public function __construct()
     {
         $this->middleware('auth');
     }
+<<<<<<< Updated upstream
+=======
+
+    public function notify()
+    {
+        $company = Company::all();
+    }
+    
+>>>>>>> Stashed changes
     /**
      * Show the form for creating a new resource.
      *
@@ -43,6 +70,7 @@ class CompanyController extends Controller
 
     public function store(CompanyformRequest $request)
     {
+<<<<<<< Updated upstream
 
         $com=new Company;
         $com->cnm=$request->cnm;
@@ -58,6 +86,21 @@ class CompanyController extends Controller
         $com->save();
 
          return redirect()->back();
+=======
+        $company =new Company;
+        
+        $company            ->  cnm=$request->cnm;
+        $company            ->  email=$request->email;
+        $logo               =   $request->file('logo');
+        $path               =   'storage/';
+        $image              =   date('YmdHis').".".$logo->getClientOriginalExtension();
+        $logo               ->  move($path,$image);
+        $company['logo']    =   "$image";            
+        $company -> website =   $request->website;
+        Notification::send($company,new SendEmailNotification($company));    
+        $company            ->  save();
+        return redirect()   ->  back();
+>>>>>>> Stashed changes
     }
 
     /**
