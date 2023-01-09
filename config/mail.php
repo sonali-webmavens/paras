@@ -14,7 +14,14 @@ return [
     */
 
     'default' => env('MAIL_MAILER', 'smtp'),
+<<<<<<< Updated upstream
 
+=======
+    
+    'postmark' => [
+        'token' => env('POSTMARK_TOKEN'),
+    ],
+>>>>>>> Stashed changes
     /*
     |--------------------------------------------------------------------------
     | Mailer Configurations

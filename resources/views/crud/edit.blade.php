@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <!DOCTYPE html>
     <html>
         <head>
@@ -51,6 +52,25 @@
                     <td align="center"><h1>EMPLOYEE REGISTRATIONS</h1></td>
                 <tr><td><input type="hidden" name="id" placeholder="Employee Id" value="{{ $emp->id}}" /></td></tr>
                     <tr><td>@error('id')<font color:'red'> {{ $message }} </font> @enderror</td></tr>
+=======
+<div class="card-body">
+    @extends('layouts.app')
+    
+    @section('content')
+    <div class="container mt-5">
+        <div class="row ">
+    
+            <div class="col-md-6">
+                <h3 class="mb-5">Edit Employe Data</h3>            
+            <form action="{{ route('EmpResource.update',$employe) }}" method="POST">
+                @csrf
+                @method('put')
+                <input type="hidden" name="id" placeholder="Company Id" value="{{ $employe->id}}" />
+                
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" class="form-control col-3" name="firstname" placeholder="Employee First Name" value="{{ $employe->firstname}}">
+                    @error('firstname')<font color:'red'> {{ $message }} </font> @enderror<br>
+>>>>>>> Stashed changes
 
                 <tr><td><input type="text" name="fname" placeholder="Employee First Name" value="{{ $emp->fname}}" /></td></tr>
                     <tr><td>@error('fname')<font color:'red'> {{ $message }} </font> @enderror</td></tr>
