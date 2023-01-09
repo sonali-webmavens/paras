@@ -1,0 +1,26 @@
+{
+    "admin"                         : "व्यवस्थापक",
+    "Login"                         : "लॉग इन करें",
+    "Email Address"                 : "ईमेल पता",
+    "Password"                      : "कुंजिका",
+    "Remember Me"                   : "मुझे याद रखें",
+    "Forgot Your Password?"         : "क्या आप पासवर्ड भूल गए?",
+    "English"                       : "अंग्रेज़ी",
+    "home"                          : "घर",
+    "You are logged in!"            : "आप लोग्ड इन हो चुके हैं!",
+    "Dashboard"                     : "डैशबोर्ड",
+    "page"                          : "पृष्ठ",
+    "about"                         : "के बारे में",
+    "contact"                       : "संपर्क करें",
+    "Logout"                        : "लॉग आउट",
+    "Laravel"                       : "लाराले",
+    "Employee"                      : "कर्मचारी",
+    "Company"                       : "कंपनी",
+    "Employee Table"                : "कर्मचारी मेज़",
+    "Company Table"                 : "कंपनी मेज़",
+    "EMPLOYEE RECORD"               : "कर्मचारी रिकॉर्ड",
+    "EMPLOYEE REGISTRATIONS"        : "कर्मचारी पंजीकरण",
+    "Employee Register"             : "कर्मचारी रजिस्टर",
+    "Home"                          : "घर"
+    
+}
