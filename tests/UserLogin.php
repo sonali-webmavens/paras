@@ -12,7 +12,7 @@ trait UserLogin{
             'email'     => $this -> $user -> email,
             'password'  => 'password'
         ]);
-        
+
         $this -> assertAuthenticated();
     }
 }

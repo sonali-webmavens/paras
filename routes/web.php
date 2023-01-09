@@ -21,7 +21,7 @@ Route::get('/',function(){
     return redirect(app()->getLocale());
 });
 Route::group([
-              'prefix'=> '{locale?}', 
+              'prefix'=> '{locale?}',
               'where'=> ['locale'=> '[a-zA-z]{2}'],
               'middleware'=> ['setlocale'] ],
             function(){
@@ -30,7 +30,7 @@ Route::group([
         return view(view:'welcome');
     });
     Route::view('/admin','admin.dashboard');
-    
+
     Auth::routes();
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 });

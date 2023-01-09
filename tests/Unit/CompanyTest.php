@@ -22,15 +22,15 @@ class CompanyTest extends TestCase
      */
     public function test_a_create_company()
     {
-        
+
         $company = Company::factory()->create();
         $company=[
             'cnm'       => 'testCompany',
             'email'     => 'test@email.com',
             'logo'      => 'test.jpg',
-            'website'   => 'www.test.com'    
+            'website'   => 'www.test.com'
         ];
-        
+
         $this -> post('/CompanyResource.store',$company);
         $this->withoutExceptionHandling();
         $response = $this -> get('/CompanyResource/en');
@@ -46,7 +46,7 @@ class CompanyTest extends TestCase
             'logo'      => 'test.jpg',
             'website'   => 'www.test.com'
         ]);
-        
+
         $this->put('/CompanyResource.update/'.$company->id,$company->toArray());
         $this->assertDatabaseHas('companies',['id'=>$company->id, 'cnm' => 'testCompany']);
     }
@@ -58,7 +58,7 @@ class CompanyTest extends TestCase
             'logo'      => 'test.jpg',
             'website'   => 'www.test.com'
        ]);
-       
+
        $this->delete('/CompanyResource.destroy/'.$company->id,$company->toArray());
        $this->assertDatabaseMissing('companies',['id'=>$company->id,$company]);
     }

@@ -23,3 +23,4 @@ class CompanySeeder extends Seeder
         Company::create($company);
     }
 }
+

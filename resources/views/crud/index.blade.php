@@ -23,7 +23,7 @@
                         <option value="{{ $companys -> id}}">
                             {{ $companys -> cnm }}
                         </option>
-                        @endforeach 
+                        @endforeach
                     </select>
                     @error('company')<font color:'red'> {{ $message }} </font> @enderror<br>
 
@@ -35,7 +35,7 @@
                     <input type="text" class="form-control" id="phone" name="phone" placeholder="Employe Contact Number">
                     @error('firstname')<font color:'red'> {{ $message }} </font> @enderror<br>
 
-                <input type="submit" name="submit" class="btn btn-primary" value="Employee Register">    
+                <input type="submit" name="submit" class="btn btn-primary" value="Employee Register">
             </form>
         </div>
     </div>

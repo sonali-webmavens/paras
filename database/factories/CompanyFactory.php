@@ -11,7 +11,7 @@ use Faker\Generator as Faker;
  */
 class CompanyFactory extends Factory
 {
-    
+
     /**
      * Define the model's default state.
      *
@@ -27,4 +27,5 @@ class CompanyFactory extends Factory
         ];
     }
 }
-//'remember_token' => Str::random(10),
+
+

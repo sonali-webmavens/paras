@@ -14,7 +14,7 @@ return [
     */
 
     'default' => env('MAIL_MAILER', 'smtp'),
-    
+
     'postmark' => [
         'token' => env('POSTMARK_TOKEN'),
     ],

@@ -11,7 +11,7 @@ abstract class TestCase extends BaseTestCase
 {
     use CreatesApplication, UserLogin;
 
-    
+
         /**
          * Run a specific seeder before each test.
          *

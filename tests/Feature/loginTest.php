@@ -34,3 +34,4 @@ class loginTest extends TestCase
         $this -> assertAuthenticated();
     }
 }
+

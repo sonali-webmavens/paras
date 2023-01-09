@@ -32,6 +32,7 @@ class EmpformRequest extends FormRequest
             'phone'=>'required|min:10|max:10',
 
         ];
+
     }
 
     public function messages()

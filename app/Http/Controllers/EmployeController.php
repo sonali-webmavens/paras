@@ -61,7 +61,7 @@ class EmployeController extends Controller
      */
     public function show(Employe $employe)
     {
-        $employe = Employe::all(); 
+        $employe = Employe::all();
         return view('crud.table' , compact('employe'));
     }
 
@@ -88,7 +88,7 @@ class EmployeController extends Controller
         $EmpResource->update($request->all());
         $EmpResource->save();
         return redirect()->route('EmpResource.show',app() -> getLocale());
-        
+
     }
 
     /**

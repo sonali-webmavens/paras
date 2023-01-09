@@ -13,20 +13,20 @@ use Notification;
 use App\Notifications\SendEmailNotification;
 // use Illuminate\Support\Facades\Notification;
 
- 
+
 class CompanyController extends Controller
 {
-    
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
-    { 
+    {
         return view('company.index');
     }
-    
+
     public function __construct()
     {
         $this->middleware('auth');
@@ -36,7 +36,7 @@ class CompanyController extends Controller
     {
         $company = Company::all();
     }
-    
+
     /**
      * Show the form for creating a new resource.
      *
@@ -57,16 +57,16 @@ class CompanyController extends Controller
     public function store(CompanyformRequest $request)
     {
         $company =new Company;
-        
+
         $company            ->  cnm=$request->cnm;
         $company            ->  email=$request->email;
         $logo               =   $request->file('logo');
         $path               =   'storage/';
         $image              =   date('YmdHis').".".$logo->getClientOriginalExtension();
         $logo               ->  move($path,$image);
-        $company['logo']    =   "$image";            
+        $company['logo']    =   "$image";
         $company -> website =   $request->website;
-        Notification::send($company,new SendEmailNotification($company));    
+        Notification::send($company,new SendEmailNotification($company));
         $company            ->  save();
         return redirect()   ->  back();
     }

@@ -1,11 +1,11 @@
 <div class="card-body">
     @extends('layouts.app')
-    
+
     @section('content')
     <div class="container mt-5">
-        <div class="row ">    
+        <div class="row ">
             <div class="col-md-6">
-                <h3 class="mb-5">Edit Employe Data</h3>            
+                <h3 class="mb-5">Edit Employe Data</h3>
             <form action="{{ route('CompanyResource.update',$com) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('put')

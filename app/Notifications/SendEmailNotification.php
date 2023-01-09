@@ -32,7 +32,7 @@ class SendEmailNotification extends Notification
      */
     public function via($notifiable)
     {
-        return  ['mail']; 
+        return  ['mail'];
     }
 
     /**
@@ -40,10 +40,10 @@ class SendEmailNotification extends Notification
      *
      * @param  mixed  $notifiable
      * @return \Illuminate\Notifications\Messages\MailMessage
-     * 
+     *
      */
     public function toMail($notifiable)
-    {    
+    {
         return (new MailMessage)
                     ->greeting('COMAPNY IS REGISTER')
                     ->line    ($this -> company -> cnm)
@@ -52,7 +52,7 @@ class SendEmailNotification extends Notification
                     ->line    ($this -> company -> website)
                     ->action  ($this -> company -> website,
                                 url('website'));
-                    
+
     }
     /**
      * Get the array representation of the notification.

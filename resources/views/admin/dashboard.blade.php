@@ -172,7 +172,7 @@
             <a href="#" class="d-block">Paras</a>
           </div>
         </div>
-  
+
 
       <!-- SidebarSearch Form -->
       <div class="form-inline">
@@ -198,9 +198,9 @@
                 Dashboard
                 <i class="right fas fa-angle-left"></i>
               </p>
-            </a>  
+            </a>
           </li>
-          
+
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-table"></i>
@@ -222,8 +222,8 @@
                   <p>Company Table</p>
                 </a>
               </li>
-              
-          
+
+
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
@@ -255,9 +255,9 @@
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-        
-        
-    
+
+
+
 
             <!-- DIRECT CHAT -->
             {{-- <div class="card direct-chat direct-chat-primary">
@@ -459,7 +459,7 @@
               </div>
               <!-- /.card-footer-->
             </div> --}}
-            
+
             <!--/.direct-chat -->
 
             <!-- TO DO List -->
@@ -592,8 +592,8 @@
               </div>
             </div> --}}
             <!-- /.card -->
-         
-          
+
+
       </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
@@ -619,3 +619,4 @@
 @extends('admin.layout.js')
 </body>
 </html>
+

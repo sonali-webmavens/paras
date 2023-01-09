@@ -1,13 +1,13 @@
 <div class="card-body">
     @extends('layouts.app')
-    
+
     @section('content')
     <div class="body">
         <link href="{{ asset('css/jquery.dataTables.min.css') }}" rel="stylesheet" >
     </div>
-    
+
     <div class="container" style="margin-top: 1%">
-        <div class="row"> 
+        <div class="row">
         <div class="col-md-12">
         <table class="table table-striped" id="table">
         <thead>
@@ -23,7 +23,7 @@
         <tbody>
             @foreach($employe as $employes)
             <tr>
-                
+
                 <td>{{ $employes->firstname}}</td>
                 <td>{{ $employes->lastname}}</td>
                 <td>{{ $employes->company_id}}</td>
@@ -40,17 +40,17 @@
             </tr>
 
         @endforeach
-        
+
         </tbody>
     </table>
-    
+
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
     <script src="{{ asset('//cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js') }}"></script>
-    
+
     <script>
         $(document).ready( function () {
-            $('#table').DataTable({     
+            $('#table').DataTable({
 		    });
 	    });
     </script>

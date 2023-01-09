@@ -19,4 +19,5 @@ class SetLocale
         app()->SetLocale($request->segment(index:1));
         return $next($request);
     }
+
 }

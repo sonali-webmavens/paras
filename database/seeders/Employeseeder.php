@@ -27,3 +27,4 @@ class Employeseeder extends Seeder
         Employe::create($employe);
     }
 }
+

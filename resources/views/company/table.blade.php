@@ -1,10 +1,10 @@
 <div class="card-body">
     @extends('layouts.app')
-    
+
     @section('content')
     <div class="container">
         <div class="row">
-            <div class="col-md-12">                
+            <div class="col-md-12">
         <div class="body">
             <link href="{{ asset('css/jquery.dataTables.min.css') }}" rel="stylesheet" >
         </div>
@@ -37,17 +37,17 @@
                     </tr>
 
                     @endforeach
-        
+
         </tbody>
     </table>
-    
+
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
     <script src="{{ asset('//cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js') }}"></script>
 
     <script>
         $(document).ready( function () {
-            $('#companyTable').DataTable({     
+            $('#companyTable').DataTable({
 		    });
 	    });
     </script>

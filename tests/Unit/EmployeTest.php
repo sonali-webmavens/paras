@@ -22,7 +22,7 @@ class EmployeTest extends TestCase
      *
      * @return void
      */
-   
+
     public function test_a_create_employe()
     {
         $employe = Employe::factory()->create();
@@ -33,7 +33,7 @@ class EmployeTest extends TestCase
             'email'         => 'test@email.com',
             'phone'         => '1234567890'
         ];
-        
+
         $this -> post('/EmpResource.store',$employe);
         $this ->withoutExceptionHandling();
         $response = $this -> get('/EmpResource/en');
@@ -61,9 +61,9 @@ class EmployeTest extends TestCase
             'cnm'       => 'testCompany',
             'email'     => 'test@email.com',
             'logo'      => 'test.jpg',
-            'website'   => 'www.test.com'    
+            'website'   => 'www.test.com'
         ];
-        
+
         $this -> post('/CompanyResource.store',$company);
         $this->withoutExceptionHandling();
         $response = $this-> get('/CompanyResource/en');
@@ -96,10 +96,10 @@ class EmployeTest extends TestCase
             'lastname' => $data['lastname'],
         ];
         $this->assertDatabaseHas('employes',$data);
-            
+
     }
 
-   
+
 
 }
 
